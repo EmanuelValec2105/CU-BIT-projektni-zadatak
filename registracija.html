@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Registracija</title>
+    <link rel="icon" type="image/x-icon" href="Project_pictures/weather-favicon.png">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap" rel="stylesheet">
+    <meta name="author" content="Emanuel Valec">
+    <meta name="keywords" content="Registracija">
+    <meta name="description" content="Stranica za registraciju">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+    <h1 class="section-title">Registration</h1>
+    <form id="registrationForm">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+        <div class="error-msg" id="emailError"></div>
+
+        <label for="password">Password</label>
+        <div class="password-wrapper">
+            <input type="password" id="password" placeholder="Enter password" required />
+            <button type="button" class="toggle-password" data-target="password">
+                <img src="Project_pictures/visibility-on.png" alt="visibility-on">
+            </button>
+        </div>
+        <div class="error-msg" id="passwordError"></div>
+
+        <label for="confirm-password">Confirm Password</label>
+        <div class="password-wrapper">
+            <input type="password" id="confirm-password" placeholder="Confirm password">
+            <button type="button" class="toggle-password" data-target="confirm-password">
+                <img src="Project_pictures/visibility-on.png" alt="visibility-on">
+            </button>
+        </div>
+        <div class="error-msg" id="confirmPasswordError"></div>
+
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+
+        <button type="submit">Register</button>
+        <div class="error-msg" id="submitMessage"></div>
+    </form>
+
+    <br><br><br><hr><br>
+    <h1 class="section-title">Weather data for selected city</h1>
+
+    <form id="weather-form">
+        <label for="city">City</label>
+        <input type="text" id="city" placeholder="Enter city name" required>
+        <button type="submit">Get Data</button>
+        <div id="weather-result"></div>
+    </form>
+
+    <script src="main.js"></script>
+
+</body>
+</html>
